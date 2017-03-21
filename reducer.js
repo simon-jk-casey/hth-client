@@ -5,6 +5,10 @@ function reducer(state, action) {
   switch (action.type) {
     case 'INIT':
       return newState
+    case 'USER_SIGNUP':
+      const newUser = newState.newUser
+      newUser[payload.field] = payload.value
+      return newState
 
     default:
       return newState
