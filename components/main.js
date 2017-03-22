@@ -3,8 +3,8 @@ import loginService from '../services/userLogin'
 
 module.exports = ({state, disptach}) => {
   const signupRoute = () => dispatch({type: 'PLACEHOLDER', payload: 'PLACEHOLDER'})
-  const loginUsername = () => dispatch({type: 'PLACEHOLDER', payload: {field: 'username', value: e.target.value}})
-  const loginPassword = () => dispatch({type: 'PLACEHOLDER', payload: {field: 'password', value: e.target.value}})
+  const loginUsername = () => dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {field: 'username', value: e.target.value}})
+  const loginPassword = () => dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {field: 'password', value: e.target.value}})
   const loginButton = (e) => {
     e.preventDefault()
     dispatch({type: 'PLACEHOLDER', payload: 'PLACEHOLDER'})
