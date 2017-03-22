@@ -5,20 +5,28 @@ import Router from 'sheet-router'
 
 import reducer from './reducer'
 
-// import components between these comments
+// COMPONENTS
+import SignUp from './components/signup'
+import Login from './components/main'
+import Stats from './components/stats'
+import DeviceView from './components/deviceView'
+import DataEntry from './components/dataEntry'
+// SERVICES
 
-//
-
-// import any required services between these comments
-
-//
-
-const initialState = {}
+const initialState = {
+  route: '/'
+}
 
 const store = createStore(reducer, initialState)
 const {getState, dispatch, subscribe} = store
 
-const route = Router()  //routes go in as params - see BC
+const route = Router({default: '404'}, [
+  ['/', (params) => Login],
+  ['/signup', (params) => SignUp],
+  ['/statistics', (params) => Stats],
+  ['/devices', (params) => DeviceView],
+  ['/dataEntry', (params) => DataEntry]
+])
 
 subscribe(() => {
   const Component = route(getState().route)
