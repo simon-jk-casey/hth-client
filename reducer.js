@@ -9,7 +9,10 @@ function reducer(state, action) {
       const newUser = newState.newUser
       newUser[payload.field] = payload.value
       return newState
-
+    case 'UPDATE_LOGIN_DETAILS':
+      const loginDetails = newState.loginDetails
+      loginDetails[payload.field] = payload.value
+      return newState
     default:
       return newState
   }

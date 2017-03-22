@@ -14,7 +14,8 @@ import DataEntry from './components/dataEntry'
 // SERVICES
 
 const initialState = {
-  route: '/'
+  route: '/',
+  loginDetails: {}
 }
 
 const store = createStore(reducer, initialState)
