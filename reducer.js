@@ -8,7 +8,7 @@ function reducer(state, action) {
     case 'USER_SIGNUP':
       const newUser = newState.newUser
       newUser[action.payload.field] = action.payload.value
-      return newStatete
+      return newState
     case 'UPDATE_LOGIN_DETAILS':
       const loginDetails = newState.loginDetails
       loginDetails[action.payload.field] = action.payload.value

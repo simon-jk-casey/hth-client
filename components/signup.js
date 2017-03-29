@@ -16,7 +16,7 @@ module.exports = ({state, dispatch}) => {
   const inputGpsCoords = (e) => dispatch({type: 'USER_SIGNUP', payload: {field: 'gpsCoords', value: e.target.value}})
   const executeSignup = (e) => {
     e.preventDefault()
-    signupService(state, dispatch)
+    signupService(state.newUser, dispatch)
   }
   return (
     <div className='signup'>

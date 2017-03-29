@@ -2,7 +2,7 @@ import React from 'react'
 import loginService from '../services/userLogin'
 
 module.exports = ({state, dispatch}) => {
-  const signupRoute = () => dispatch({type: 'PLACEHOLDER', payload: 'PLACEHOLDER'})
+  const signupRoute = () => dispatch({type: 'CHANGE_ROUTE', payload: '/signup'})
   const loginUsername = (e) => dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {field: 'username', value: e.target.value}})
   const loginPassword = (e) => dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {field: 'password', value: e.target.value}})
   const loginButton = (e) => {
