@@ -8,7 +8,7 @@ module.exports = ({state, dispatch}) => {
   const loginButton = (e) => {
     e.preventDefault()
     dispatch({type: 'PLACEHOLDER', payload: 'PLACEHOLDER'})
-    loginService(state, dispatch)
+    loginService(state.loginDetails, dispatch)
   }
   return (
     <div>
