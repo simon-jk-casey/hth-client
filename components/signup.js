@@ -33,7 +33,7 @@ module.exports = ({state, dispatch}) => {
           <input onChange={inputGpsCoords} type='text' placeholder='GPS Coordinates' />
           <button className='buttons' onClick={executeSignup} type='submit'>SIGN UP</button>
         </form>
-        <button className='buttons' onClick={() => dispatch({type: "placeholder-routetomain", payload: 'placeholder route'})} type='submit'>CANCEL</button>
+        <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/'})} type='submit'>CANCEL</button>
     </div>
   )
 }
