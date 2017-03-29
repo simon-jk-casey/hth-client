@@ -11,6 +11,7 @@ import Login from './components/main'
 import Stats from './components/stats'
 import DeviceView from './components/deviceView'
 import DataEntry from './components/dataEntry'
+import Profile from './components/profile'
 // SERVICES
 
 const initialState = {
@@ -24,6 +25,7 @@ const {getState, dispatch, subscribe} = store
 const route = Router({default: '404'}, [
   ['/', (params) => Login],
   ['/signup', (params) => SignUp],
+  ['/profile', (params) => Profile],
   ['/statistics', (params) => Stats],
   ['/devices', (params) => DeviceView],
   ['/dataEntry', (params) => DataEntry]
