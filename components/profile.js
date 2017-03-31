@@ -9,7 +9,7 @@ module.exports = ({state, dispatch}) => {
   return (
     <div>
       <div>
-        <Menu />
+        <Menu dispatch={dispatch}/>
       </div>
       <div>
         <h3>Welcome back {name}!</h3>
