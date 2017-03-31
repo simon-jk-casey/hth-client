@@ -20,20 +20,20 @@ module.exports = ({state, dispatch}) => {
   }
   return (
     <div className='signup'>
-        <form>
-          <input onChange={inputUsername} type='text' placeholder='Username' />
-          <input onChange={inputPassword} type='password' placeholder='Password' />
-          <input onChange={inputFirstName} type='text' placeholder='First Name' />
-          <input onChange={inputLastName} type='text' placeholder='Last Name' />
-          <input onChange={inputStreetNumber} type='text' placeholder='Street No.' />
-          <input onChange={inputStreetName} type='text' placeholder='Street Name' />
-          <input onChange={inputSuburb} type='text' placeholder='Suburb' />
-          <input onChange={inputCity} type='text' placeholder='City' />
-          <input onChange={inputEmail} type='email' placeholder='Email Address' />
-          <input onChange={inputGpsCoords} type='text' placeholder='GPS Coordinates' />
-          <button className='buttons' onClick={executeSignup} type='submit'>SIGN UP</button>
-        </form>
-        <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/'})} type='submit'>CANCEL</button>
+      <form>
+        <input onChange={inputUsername} type='text' placeholder='Username' />
+        <input onChange={inputPassword} type='password' placeholder='Password' />
+        <input onChange={inputFirstName} type='text' placeholder='First Name' />
+        <input onChange={inputLastName} type='text' placeholder='Last Name' />
+        <input onChange={inputStreetNumber} type='text' placeholder='Street No.' />
+        <input onChange={inputStreetName} type='text' placeholder='Street Name' />
+        <input onChange={inputSuburb} type='text' placeholder='Suburb' />
+        <input onChange={inputCity} type='text' placeholder='City' />
+        <input onChange={inputEmail} type='email' placeholder='Email Address' />
+        <input onChange={inputGpsCoords} type='text' placeholder='GPS Coordinates' />
+        <button className='buttons' onClick={executeSignup} type='submit'>SIGN UP</button>
+      </form>
+      <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/'})} type='submit'>CANCEL</button>
     </div>
   )
 }
