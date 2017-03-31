@@ -1,5 +1,6 @@
 import React from 'react'
 import loginService from '../services/userLogin'
+import userData from '../services/getUserData'
 
 module.exports = ({state, dispatch}) => {
   const signupRoute = () => dispatch({type: 'CHANGE_ROUTE', payload: '/signup'})
@@ -7,7 +8,6 @@ module.exports = ({state, dispatch}) => {
   const loginPassword = (e) => dispatch({type: 'UPDATE_LOGIN_DETAILS', payload: {field: 'password', value: e.target.value}})
   const loginButton = (e) => {
     e.preventDefault()
-    dispatch({type: 'PLACEHOLDER', payload: 'PLACEHOLDER'})
     loginService(state.loginDetails, dispatch)
   }
   return (

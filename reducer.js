@@ -16,6 +16,9 @@ function reducer(state, action) {
     case 'CHANGE_ROUTE':
       newState.route = action.payload
       return newState
+    case 'USER_DETAILS':
+      newState.userDetails = action.payload
+      return newState
     default:
       return newState
   }
