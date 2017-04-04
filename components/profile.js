@@ -1,15 +1,15 @@
 import React from 'react'
-import userData from '../services/getUserData'
+import userDataSvc from '../services/getUserData'
 import Menu from './menu'
 
 module.exports = ({state, dispatch}) => {
-  userData(dispatch)
+  userDataSvc(dispatch)
   const name = state.userDetails.firstName
   const {username, firstName, lastName, streetNumber, streetName, suburb, city, email, gpsCoords} = state.userDetails
   return (
     <div>
       <div>
-        <Menu dispatch={dispatch}/>
+        <Menu dispatch={dispatch} />
       </div>
       <div>
         <h3>Welcome back {name}!</h3>

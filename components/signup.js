@@ -1,5 +1,5 @@
 import React from 'react'
-import signupService from '../services/signup'
+import signupSvc from '../services/signup'
 
 // consider a NZ address finder API for this?
 
@@ -16,7 +16,7 @@ module.exports = ({state, dispatch}) => {
   const inputGpsCoords = (e) => dispatch({type: 'USER_SIGNUP', payload: {field: 'gpsCoords', value: e.target.value}})
   const executeSignup = (e) => {
     e.preventDefault()
-    signupService(state.newUser, dispatch)
+    signupSvc(state.newUser, dispatch)
   }
   return (
     <div className='signup'>

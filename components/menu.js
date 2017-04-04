@@ -1,7 +1,6 @@
 import React from 'react'
 
 module.exports = ({state, dispatch}) => {
-  const logoutRoute = () => dispatch({type: 'CHANGE_ROUTE', payload: '/'})
   return (
     <div className='menuBar'>
       <table>
@@ -32,11 +31,4 @@ module.exports = ({state, dispatch}) => {
   )
 }
 
-//investigate better ways of doing this .. <menu>?
-
-
-{/* <th className='buttonCell' onClick={() => dispatch({type: 'PLACEHOLDER', payload: '/devices'})}>Devices</th>
-<th className='buttonCell' onClick={() => dispatch({type: 'PLACEHOLDER', payload: '/dataEntry'})}>Data Entry</th>
-<th className='buttonCell' onClick={() => dispatch({type: 'PLACEHOLDER', payload: 'PLACEHOLDER'})}>Entry History</th>
-<th className='buttonCell' onClick={() => dispatch({type: 'PLACEHOLDER', payload: 'PLACEHOLDER'})}>View Data</th>
-<th className='buttonCell' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/'})}>Log Out</th> */}
+// investigate better ways of doing this .. <menu>?
