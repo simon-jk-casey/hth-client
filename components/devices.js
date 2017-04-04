@@ -9,8 +9,16 @@ module.exports = ({state, dispatch}) => {
         <Menu dispatch={dispatch} />
       </div>
       <div>
-        
+        <button className='button' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/addDevice'})}>Add Device</button>
+      </div>
+      <div>
+        {listDevices()}
       </div>
     </div>
   )
+
+  function listDevices () {
+    const devices = getDeviceSvc(dispatch)
+    // render device list with remove buttons (need confirmation to proceed also) once data is incoming
+  }
 }

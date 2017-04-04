@@ -22,7 +22,11 @@ function reducer(state, action) {
     case 'DEVICE_LIST':
       newState.deviceList = action.payload
       return newState
-      
+    case 'ADD_DEVICE':
+      const newDevice = newState.newDevice
+      newDevice[action.payload.field] = action.payload.value
+      return newState
+
     default:
       return newState
   }

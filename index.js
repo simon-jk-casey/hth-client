@@ -6,10 +6,11 @@ import Router from 'sheet-router'
 import reducer from './reducer'
 
 // COMPONENTS
-import SignUp from './components/signup'
+import Signup from './components/signup'
 import Login from './components/main'
 import Stats from './components/stats'
 import Devices from './components/devices'
+import AddDevice from './components/addDevice'
 import DataEntry from './components/dataEntry'
 import Profile from './components/profile'
 // SERVICES
@@ -19,7 +20,8 @@ const initialState = {
   loginDetails: {},
   newUser: {},
   userDetails: {},
-  deviceList: {}
+  deviceList: {},
+  newDevice: {}
 }
 
 const store = createStore(reducer, initialState)
@@ -27,10 +29,11 @@ const {getState, dispatch, subscribe} = store
 
 const route = Router({default: '404'}, [
   ['/', (params) => Login],
-  ['/signup', (params) => SignUp],
+  ['/signup', (params) => Signup],
   ['/profile', (params) => Profile],
   ['/statistics', (params) => Stats],
   ['/devices', (params) => Devices],
+  ['/addDevice', (params) => AddDevice],
   ['/dataEntry', (params) => DataEntry]
 ])
 
