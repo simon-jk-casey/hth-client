@@ -9,7 +9,7 @@ import reducer from './reducer'
 import SignUp from './components/signup'
 import Login from './components/main'
 import Stats from './components/stats'
-import DeviceView from './components/deviceView'
+import Devices from './components/devices'
 import DataEntry from './components/dataEntry'
 import Profile from './components/profile'
 // SERVICES
@@ -18,7 +18,8 @@ const initialState = {
   route: '/',
   loginDetails: {},
   newUser: {},
-  userDetails: {}
+  userDetails: {},
+  deviceList: {}
 }
 
 const store = createStore(reducer, initialState)
@@ -29,7 +30,7 @@ const route = Router({default: '404'}, [
   ['/signup', (params) => SignUp],
   ['/profile', (params) => Profile],
   ['/statistics', (params) => Stats],
-  ['/devices', (params) => DeviceView],
+  ['/devices', (params) => Devices],
   ['/dataEntry', (params) => DataEntry]
 ])
 

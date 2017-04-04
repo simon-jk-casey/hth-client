@@ -19,6 +19,10 @@ function reducer(state, action) {
     case 'USER_DETAILS':
       newState.userDetails = action.payload
       return newState
+    case 'DEVICE_LIST':
+      newState.deviceList = action.payload
+      return newState
+      
     default:
       return newState
   }
