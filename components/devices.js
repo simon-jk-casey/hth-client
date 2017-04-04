@@ -12,13 +12,13 @@ module.exports = ({state, dispatch}) => {
         <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/addDevice'})}>Add Device</button>
       </div>
       <div>
-        {listDevices()}
+        {/* {listDevices()} */}
       </div>
     </div>
   )
 
-  function listDevices () {
-    const devices = getDeviceSvc(dispatch)
-    // render device list with remove buttons (need confirmation to proceed also) once data is incoming
-  }
+  // function listDevices () {
+  //   const devices = getDeviceSvc(dispatch)
+  //   // render device list with remove buttons (need confirmation to proceed also) once data is incoming
+  // }
 }

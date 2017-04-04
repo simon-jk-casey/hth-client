@@ -15,3 +15,6 @@ Watch addDevice, signup cancellation
 
 ADD TOGGLE TO MENU COMPONENTS
 color change when on selected route
+
+SERVICES:
+signup and addDevice - alter and test, works but looks wrong/some redundancy -- THIS MAYBE ok, but can specify them down to the responses from server
