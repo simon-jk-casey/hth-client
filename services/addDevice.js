@@ -8,7 +8,8 @@ module.exports = ({newDevice}, dispatch) => {
   .end((err, res) => {
     if (res) {
       if (!err) {
-        dispatch({type: 'placeholder', payload: 'placeholder'})
+
+        //dispatch({type: 'placeholder', payload: 'placeholder'})
       }
     }
   })
