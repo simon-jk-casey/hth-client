@@ -10,6 +10,8 @@ module.exports = (newUserData, dispatch) => {
     if (res) {
       if (!err) {
         dispatch({type: 'CHANGE_ROUTE', payload: '/'})
+      } else {
+        throw err
       }
     }
   })

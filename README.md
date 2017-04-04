@@ -1,6 +1,5 @@
 CURRENT WORKING:
 
-ROUTING:  need a dispatch for route changing
-LOGIN:  need login button dispatch
+APPLY MENU TO OTHER COMPONENTS
 
-singup is operational,  login with account returns 400 bad request for some reason.
+ALLOW BACK/FORWARD NAV IN SHEET ROUTER

@@ -17,7 +17,8 @@ import Profile from './components/profile'
 const initialState = {
   route: '/',
   loginDetails: {},
-  newUser: {}
+  newUser: {},
+  userDetails: {}
 }
 
 const store = createStore(reducer, initialState)

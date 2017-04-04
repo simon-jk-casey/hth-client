@@ -1,11 +1,11 @@
 import request from 'superagent'
 
-module.exports = (userId, dispatch) => {
+module.exports = (dispatch) => {
   request
-  .get(`http://localhost:3000/api/v1/user/${userId}`)
+  .get('http://localhost:3000/api/v1/user')
   .withCredentials()
   .end((err, res) => {
-    if (!err) console.log(res)
+    if (!err) dispatch({type: 'USER_DETAILS', payload: res.body[0]})
     else throw err
   })
 }
