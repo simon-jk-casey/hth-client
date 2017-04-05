@@ -20,7 +20,7 @@ const initialState = {
   loginDetails: {},
   newUser: {},
   userDetails: {},
-  deviceList: [{}],
+  deviceList: [],
   newDevice: {}
 }
 
