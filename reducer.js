@@ -19,6 +19,14 @@ function reducer(state, action) {
     case 'USER_DETAILS':
       newState.userDetails = action.payload
       return newState
+    case 'DEVICE_LIST':
+      newState.deviceList = action.payload
+      return newState
+    case 'ADD_DEVICE':
+      const newDevice = newState.newDevice
+      newDevice[action.payload.field] = action.payload.value
+      return newState
+
     default:
       return newState
   }
