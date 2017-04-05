@@ -1,9 +1,9 @@
 import React from 'react'
-import userDataSvc from '../services/getUserData'
+// import userDataSvc from '../services/getUserData'
 import Menu from './menu'
 
 module.exports = ({state, dispatch}) => {
-  userDataSvc(dispatch)
+  // userDataSvc(dispatch)
   // const name = state.userDetails.firstName
   const {username, firstName, lastName, streetNumber, streetName, suburb, city, email, gpsCoords} = state.userDetails
   return (
