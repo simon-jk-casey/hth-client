@@ -1,6 +1,5 @@
 import React from 'react'
 import Menu from './menu'
-// import getDeviceSvc from '../services/getDevices'
 
 module.exports = ({state, dispatch}) => {
   return (
@@ -11,8 +10,14 @@ module.exports = ({state, dispatch}) => {
       <div>
         <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/addDevice'})}>Add Device</button>
       </div>
-      <div>
-      </div>
+      {renderDeviceList()}
     </div>
   )
+
+  function renderDeviceList () {
+    const { deviceList } = state
+    return deviceList.map((device) =>
+      <div key={device.id}>Device Name: {device.deviceName}  Device Type: {device.deviceType} <br /> Notes: {device.notes}</div>
+    )
+  }
 }

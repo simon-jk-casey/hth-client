@@ -1,4 +1,6 @@
 import request from 'superagent'
+import getDeviceListSvc from '../services/getDevices'
+
 
 module.exports = ((loginData, dispatch) => {
   // const {username, password} = loginData
@@ -8,6 +10,7 @@ module.exports = ((loginData, dispatch) => {
     .withCredentials()
     .end((err, res) => {
       if (!err) {
+        getDeviceListSvc(dispatch)
         dispatch({type: 'CHANGE_ROUTE', payload: '/profile'})
       } else {
         dispatch({type: 'CHANGE_ROUTE', payload: '/'})

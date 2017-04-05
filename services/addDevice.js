@@ -1,4 +1,5 @@
 import request from 'superagent'
+import getDeviceListSvc from '../services/getDevices'
 
 module.exports = (newDevice, dispatch) => {
   request
@@ -8,6 +9,7 @@ module.exports = (newDevice, dispatch) => {
   .end((err, res) => {
     if (res) {
       if (!err) {
+        getDeviceListSvc(dispatch)
         dispatch({type: 'CHANGE_ROUTE', payload: '/devices'})
       }
     } else {
