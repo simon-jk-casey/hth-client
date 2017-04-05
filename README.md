@@ -4,6 +4,11 @@ RENDER LIST OF DEVICES
 
 TO DO:
 
+DATA ENTRY COMPONENT:
+Refine/refactor predator selection (create array, map and render?)
+
+SUCCESS NOTIFIERS UPON ADDING INFO (SIGNUP/DEVICES/DATA)
+
 REFACTOR:
 destructure state references
 
