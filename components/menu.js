@@ -13,7 +13,7 @@ module.exports = ({state, dispatch}) => {
               <button className='menuButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/devices'})}>Devices</button>
             </th>
             <th className='buttonCell'>
-              <button className='menuButton' onClick={() => dispatch({type: '', payload: ''})}>Data Entry</button>
+              <button className='menuButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/dataEntry'})}>Data Entry</button>
             </th>
             <th className='buttonCell'>
               <button className='menuButton' onClick={() => dispatch({type: '', payload: ''})}>Entry History</button>

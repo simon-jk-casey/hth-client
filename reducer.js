@@ -26,6 +26,10 @@ function reducer(state, action) {
       const newDevice = newState.newDevice
       newDevice[action.payload.field] = action.payload.value
       return newState
+    case 'ADD_PREDATOR':
+      const newPredatorData = newState.newPredatorData
+      newPredatorData[action.payload.field] = action.payload.value
+      return newState
 
     default:
       return newState

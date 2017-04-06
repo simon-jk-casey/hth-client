@@ -3,8 +3,6 @@ import React from 'react'
 import Menu from './menu'
 
 module.exports = ({state, dispatch}) => {
-  // userDataSvc(dispatch)
-  // const name = state.userDetails.firstName
   const {username, firstName, lastName, streetNumber, streetName, suburb, city, email, gpsCoords} = state.userDetails
   return (
     <div>

@@ -4,6 +4,12 @@ RENDER LIST OF DEVICES
 
 TO DO:
 
+DATA ENTRY COMPONENT:
+Refine/refactor predator selection (create array, map and render?)
+change from radio input to divs with an "isSelected" condition in the state?
+
+SUCCESS NOTIFIERS UPON ADDING INFO (SIGNUP/DEVICES/DATA)
+
 REFACTOR:
 destructure state references
 

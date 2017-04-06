@@ -21,7 +21,8 @@ const initialState = {
   newUser: {},
   userDetails: {},
   deviceList: [],
-  newDevice: {}
+  newDevice: {},
+  newPredatorData: {}
 }
 
 const store = createStore(reducer, initialState)
