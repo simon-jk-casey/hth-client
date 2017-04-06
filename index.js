@@ -8,7 +8,7 @@ import reducer from './reducer'
 // COMPONENTS
 import Signup from './components/signup'
 import Login from './components/main'
-import History from './components/stats'
+import History from './components/history'
 import Devices from './components/devices'
 import AddDevice from './components/addDevice'
 import DataEntry from './components/dataEntry'
@@ -22,17 +22,9 @@ const initialState = {
   userDetails: {},
   deviceList: [],
   newDevice: {},
-  newPredatorData: {}
-  historyToggles: {
-    captureHistory: false,
-    deviceHistory: false,
-    profileHistory: false
-  }
-  historyData: {
-    captures: [],
-    devices: [],
-    profile: []
-  }
+  newPredatorData: {},
+  historyToggled: false,
+  historyData: {}
 }
 
 const store = createStore(reducer, initialState)
