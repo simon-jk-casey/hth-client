@@ -65,17 +65,19 @@ module.exports = ({state, dispatch}) => {
           </div>
           <button className='buttons' onClick={addPredatorData} type='submit'>SUBMIT</button>
         </form>
-        <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/dataEntry'})}>CANCEL</button>
+        <button className='buttons' onClick={cancelForm}>CANCEL</button>
       </div>
     </div>
   )
 
-  function deviceListSelectOptions() {
+  function deviceListSelectOptions () {
     const { deviceList } = state
     return deviceList.map((device) =>
       <option key={device.id} value={device.id}>Name: {device.deviceName} - Type: {device.deviceType}</option>
     )
   }
 }
-
+  function cancelForm () {
+    document.getElementById('predatorEntry').reset()
+  }
 // Need to reset form on cancel - need fn with document.getElementById('predatorEntry').reset()
