@@ -1,5 +1,6 @@
 CURRENT WORKING:
-RENDER LIST OF DEVICES
+rendering history
+need reducer case for toggling history for show more
 
 
 TO DO:
