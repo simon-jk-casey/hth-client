@@ -1,6 +1,9 @@
 CURRENT WORKING:
 rendering history
 need reducer case for toggling history for show more
+~~these two are done but not tested, need data to test, see next requirement
+
+SERVER:  NEED JOIN BETWEEN DATA TABLE AND DEVICE TABLE FOR HISTORY ROUTE
 
 
 TO DO:
