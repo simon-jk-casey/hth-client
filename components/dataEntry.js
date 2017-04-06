@@ -8,7 +8,8 @@ module.exports = ({state, dispatch}) => {
   const captureNotes = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureNotes', value: e.target.value}})
   const addPredatorData = (e) => {
     e.preventDefault()
-    addDataSvc(state.newPredatorData)
+    addDataSvc(state.newPredatorData, dispatch)
+    clearForm()
   }
   return (
     <div>
@@ -65,7 +66,7 @@ module.exports = ({state, dispatch}) => {
           </div>
           <button className='buttons' onClick={addPredatorData} type='submit'>SUBMIT</button>
         </form>
-        <button className='buttons' onClick={cancelForm}>CANCEL</button>
+        <button className='buttons' onClick={clearForm}>CANCEL</button>
       </div>
     </div>
   )
@@ -77,7 +78,7 @@ module.exports = ({state, dispatch}) => {
     )
   }
 }
-  function cancelForm () {
+  function clearForm () {
     document.getElementById('predatorEntry').reset()
   }
 // Need to reset form on cancel - need fn with document.getElementById('predatorEntry').reset()
