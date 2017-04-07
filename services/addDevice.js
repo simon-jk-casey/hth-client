@@ -10,10 +10,14 @@ module.exports = (newDevice, dispatch) => {
     if (res) {
       if (!err) {
         getDeviceListSvc(dispatch)
+        dispatch({type: 'CLEAR_STATE', payload: 'newDevice'})
         dispatch({type: 'CHANGE_ROUTE', payload: '/devices'})
       }
     } else {
       throw err
     }
   })
+  function clearForm () {
+    document.getElementById('deviceEntry').reset()
+  }
 }

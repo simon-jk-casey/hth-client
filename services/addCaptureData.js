@@ -7,11 +7,14 @@ module.exports = (predatorData, dispatch) => {
   .send(predatorData)
   .withCredentials()
   .end((err, res) => {
-    if (!err) {
-      getCaptureDataSvc(dispatch)
-      dispatch({type: 'CHANGE_ROUTE', payload: '/dataEntry'})
-    } else {
-      throw err
+    if (res) {
+      if (!err) {
+        getCaptureDataSvc(dispatch)
+        dispatch({type: 'CLEAR_STATE', payload: 'newPredatorData'})
+        dispatch({type: 'CHANGE_ROUTE', payload: '/DataEntry'})
+      } else {
+        throw err
+      }
     }
   })
 }

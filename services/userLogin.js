@@ -15,6 +15,7 @@ module.exports = ((loginData, dispatch) => {
         userDataSvc(dispatch)
         getDeviceListSvc(dispatch)
         getCaptureDataSvc(dispatch)
+        dispatch({type: 'CLEAR_STATE', payload: 'loginDetails'})
         dispatch({type: 'CHANGE_ROUTE', payload: '/profile'})
       } else {
         dispatch({type: 'CHANGE_ROUTE', payload: '/'})

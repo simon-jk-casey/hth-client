@@ -16,7 +16,7 @@ module.exports = ({state, dispatch}) => {
         <Menu dispatch={dispatch} />
       </div>
       <div>
-        <form>
+        <form id='deviceEntry'>
           <input onChange={deviceName} type='text' placeholder='Device Name' />
           <select onChange={deviceType} name='Device Type'>
             <option value='killTrap'>Kill Trap</option>
