@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from './menu'
 
-module.exports = (state, dispatch) => {
+module.exports = ({state, dispatch}) => {
   return (
     <div>
       <div>

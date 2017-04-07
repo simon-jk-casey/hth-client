@@ -1,6 +1,5 @@
 import React from 'react'
 import loginService from '../services/userLogin'
-import userData from '../services/getUserData'
 
 module.exports = ({state, dispatch}) => {
   const signupRoute = () => dispatch({type: 'CHANGE_ROUTE', payload: '/signup'})
