@@ -19,7 +19,8 @@ module.exports = ({state, dispatch}) => {
       <div>
         <form id='predatorEntry'>
           <div>
-            <select onChange={captureDevice}>
+            <select defaultValue='null' onChange={captureDevice}>
+              <option value='null' disabled>Select Device</option>
               {deviceListSelectOptions()}
             </select>
           </div>

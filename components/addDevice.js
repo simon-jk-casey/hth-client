@@ -18,7 +18,8 @@ module.exports = ({state, dispatch}) => {
       <div>
         <form id='deviceEntry'>
           <input onChange={deviceName} type='text' placeholder='Device Name' />
-          <select onChange={deviceType} name='Device Type'>
+          <select defaultValue='null' onChange={deviceType} name='Device Type'>
+            <option value='null' disabled>Select Device Type</option>
             <option value='killTrap'>Kill Trap</option>
             <option value='captureTrap'>Capture Trap</option>
             <option value='poison'>Poison</option>
