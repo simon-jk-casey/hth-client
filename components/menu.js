@@ -19,7 +19,7 @@ module.exports = ({state, dispatch}) => {
               <button className='menuButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/history'})}>Entry History</button>
             </th>
             <th className='buttonCell'>
-              <button className='menuButton' onClick={() => dispatch({type: '', payload: ''})}>Data Views</button>
+              <button className='menuButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/dataViews'})}>Data Views</button>
             </th>
             <th className='buttonCell'>
               <button className='menuButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/'})}>Log Out</button>
