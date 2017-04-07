@@ -10,10 +10,10 @@ module.exports = (predatorData, dispatch) => {
     if (res) {
       if (!err) {
         getCaptureDataSvc(dispatch)
-        dispatch({type: 'CHANGE_ROUTE', payload: '/dataEntry'})
+        dispatch({type: 'CLEAR_STATE_CHANGE_ROUTE', payload: {category: 'newPredatorData', route: '/dataEntry'}})
+      } else {
+        throw err
       }
-    } else {
-      throw err
     }
   })
 }

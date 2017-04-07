@@ -13,6 +13,7 @@ import Devices from './components/devices'
 import AddDevice from './components/addDevice'
 import DataEntry from './components/dataEntry'
 import Profile from './components/profile'
+import Views from './components/dataMapViewer'
 // SERVICES
 
 const initialState = {
@@ -37,7 +38,8 @@ const route = Router({default: '404'}, [
   ['/history', (params) => History],
   ['/devices', (params) => Devices],
   ['/addDevice', (params) => AddDevice],
-  ['/dataEntry', (params) => DataEntry]
+  ['/dataEntry', (params) => DataEntry],
+  ['/views', (params) => Views]
 ])
 
 subscribe(() => {

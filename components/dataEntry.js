@@ -2,7 +2,6 @@ import React from 'react'
 import Menu from './menu'
 import addCaptureDataSvc from '../services/addCaptureData'
 
-
 module.exports = ({state, dispatch}) => {
   const captureDevice = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureDevice', value: e.target.value}})
   const capturedPredator = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'capturedPredator', value: e.target.value}})
@@ -20,7 +19,8 @@ module.exports = ({state, dispatch}) => {
       <div>
         <form id='predatorEntry'>
           <div>
-            <select onChange={captureDevice}>
+            <select id='test' defaultValue='null' onChange={captureDevice}>
+              <option value='null' disabled>Select Device</option>
               {deviceListSelectOptions()}
             </select>
           </div>
@@ -81,5 +81,6 @@ module.exports = ({state, dispatch}) => {
 
   function clearForm () {
     document.getElementById('predatorEntry').reset()
+    dispatch({type: 'CLEAR_STATE'})
   }
 }

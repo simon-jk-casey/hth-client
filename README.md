@@ -8,6 +8,12 @@ SERVER:  NEED JOIN BETWEEN DATA TABLE AND DEVICE TABLE FOR HISTORY ROUTE
 
 TO DO:
 
+DATAENTRY:
+--CANCEL/SUBMIT - the form reset does not reset the drop down to the default disabled option
+
+LOGIN SERVICE:
+--on error render message
+
 CAN REFACTOR HISTORY_TOGGLE case in reducer?
 
 DATA ENTRY COMPONENT:

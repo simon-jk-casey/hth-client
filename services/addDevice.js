@@ -10,7 +10,7 @@ module.exports = (newDevice, dispatch) => {
     if (res) {
       if (!err) {
         getDeviceListSvc(dispatch)
-        dispatch({type: 'CHANGE_ROUTE', payload: '/devices'})
+        dispatch({type: 'CLEAR_STATE_CHANGE_ROUTE', payload: {category: 'newDevice', route: '/devices'}})
       }
     } else {
       throw err
