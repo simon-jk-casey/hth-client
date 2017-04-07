@@ -33,9 +33,9 @@ function reducer (state, action) {
     case 'ENTRY_HISTORY':
       newState.historyData = action.payload
       return newState
-    // case 'CLEAR_STATE':
-    //   newState[action.payload] = {}
-    //   return newState
+    case 'CLEAR_STATE':
+      newState[action.payload] = {}
+      return newState
     case 'CLEAR_STATE_CHANGE_ROUTE':
       newState[action.payload.category] = {}
       newState.route = action.payload.route
