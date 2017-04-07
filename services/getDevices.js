@@ -2,7 +2,7 @@ import request from 'superagent'
 
 module.exports = (dispatch) => {
   // const baseUrl = 'http://localhost:3000' // *dev
-  const baseUrl = 'https://hth.herokuapp.com' // *deployed
+  const baseUrl = 'https://predata.herokuapp.com' // *deployed
   request
   .get(baseUrl + '/api/v1/devices')
   .withCredentials()

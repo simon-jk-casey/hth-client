@@ -3,7 +3,7 @@ import getDeviceListSvc from '../services/getDevices'
 
 module.exports = (newDevice, dispatch) => {
   // const baseUrl = 'http://localhost:3000' // *dev
-  const baseUrl = 'https://hth.herokuapp.com' // *deployed
+  const baseUrl = 'https://predata.herokuapp.com' // *deployed
   request
   .post(baseUrl + '/api/v1/devices')
   .send(newDevice)
