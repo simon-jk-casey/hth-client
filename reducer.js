@@ -30,10 +30,8 @@ function reducer(state, action) {
       const newPredatorData = newState.newPredatorData
       newPredatorData[action.payload.field] = action.payload.value
       return newState
-    case 'HISTORY_TOGGLE':
-      let toggled = newState.historyToggled
-      if (!toggled) toggled = true
-      else toggled = false
+    case 'ENTRY_HISTORY':
+      newState.historyData = action.payload
       return newState
 
     default:

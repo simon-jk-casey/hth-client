@@ -1,4 +1,5 @@
 import request from 'superagent'
+import getCaptureDataSvc from '../services/getCaptureData'
 
 module.exports = (predatorData, dispatch) => {
   request
@@ -8,6 +9,7 @@ module.exports = (predatorData, dispatch) => {
   .end((err, res) => {
     if (res) {
       if (!err) {
+        getCaptureDataSvc(dispatch)
         dispatch({type: 'CHANGE_ROUTE', payload: '/dataEntry'})
       }
     } else {

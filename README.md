@@ -8,6 +8,8 @@ SERVER:  NEED JOIN BETWEEN DATA TABLE AND DEVICE TABLE FOR HISTORY ROUTE
 
 TO DO:
 
+CAN REFACTOR HISTORY_TOGGLE case in reducer?
+
 DATA ENTRY COMPONENT:
 Refine/refactor predator selection (create array, map and render?)
 change from radio input to divs with an "isSelected" condition in the state?
