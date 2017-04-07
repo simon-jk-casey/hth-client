@@ -1,7 +1,7 @@
 import React from 'react'
 import signupSvc from '../services/signup'
 
-// consider a NZ address finder API for this?
+// consider a NZ address finder API for this? Google API?
 
 module.exports = ({state, dispatch}) => {
   const inputUsername = (e) => dispatch({type: 'USER_SIGNUP', payload: {field: 'username', value: e.target.value}})

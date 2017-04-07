@@ -1,8 +1,10 @@
 import request from 'superagent'
 
 module.exports = (dispatch) => {
+  const baseUrl = 'http://localhost:3000' // *dev
+//  const baseUrl = 'https://hth.herokuapp.com' // *deployed
   request
-  .get('http://localhost:3000/api/v1/devices')
+  .get(baseUrl + '/api/v1/devices')
   .withCredentials()
   .end((err, res) => {
     if (!err) dispatch({type: 'DEVICE_LIST', payload: res.body})
