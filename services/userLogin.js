@@ -1,7 +1,7 @@
 import request from 'superagent'
 import getDeviceListSvc from '../services/getDevices'
 import userDataSvc from '../services/getUserData'
-
+import getCaptureDataSvc from '../services/getCaptureData'
 
 
 module.exports = ((loginData, dispatch) => {
@@ -14,6 +14,7 @@ module.exports = ((loginData, dispatch) => {
       if (!err) {
         userDataSvc(dispatch)
         getDeviceListSvc(dispatch)
+        getCaptureDataSvc(dispatch)
         dispatch({type: 'CHANGE_ROUTE', payload: '/profile'})
       } else {
         dispatch({type: 'CHANGE_ROUTE', payload: '/'})

@@ -30,6 +30,9 @@ function reducer(state, action) {
       const newPredatorData = newState.newPredatorData
       newPredatorData[action.payload.field] = action.payload.value
       return newState
+    case 'ENTRY_HISTORY':
+      newState.historyData = action.payload
+      return newState
 
     default:
       return newState

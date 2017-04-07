@@ -1,6 +1,7 @@
 import React from 'react'
 import Menu from './menu'
-import addDataSvc from '../services/addData'
+import addCaptureDataSvc from '../services/addCaptureData'
+
 
 module.exports = ({state, dispatch}) => {
   const captureDevice = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureDevice', value: e.target.value}})
@@ -8,7 +9,7 @@ module.exports = ({state, dispatch}) => {
   const captureNotes = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureNotes', value: e.target.value}})
   const addPredatorData = (e) => {
     e.preventDefault()
-    addDataSvc(state.newPredatorData, dispatch)
+    addCaptureDataSvc(state.newPredatorData, dispatch)
     clearForm()
   }
   return (
@@ -77,8 +78,8 @@ module.exports = ({state, dispatch}) => {
       <option key={device.id} value={device.id}>Name: {device.deviceName} - Type: {device.deviceType}</option>
     )
   }
-}
+
   function clearForm () {
     document.getElementById('predatorEntry').reset()
   }
-// Need to reset form on cancel - need fn with document.getElementById('predatorEntry').reset()
+}

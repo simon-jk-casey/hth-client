@@ -8,7 +8,7 @@ import reducer from './reducer'
 // COMPONENTS
 import Signup from './components/signup'
 import Login from './components/main'
-import Stats from './components/stats'
+import History from './components/history'
 import Devices from './components/devices'
 import AddDevice from './components/addDevice'
 import DataEntry from './components/dataEntry'
@@ -22,7 +22,9 @@ const initialState = {
   userDetails: {},
   deviceList: [],
   newDevice: {},
-  newPredatorData: {}
+  newPredatorData: {},
+  historyToggled: false,
+  historyData: {}
 }
 
 const store = createStore(reducer, initialState)
@@ -32,7 +34,7 @@ const route = Router({default: '404'}, [
   ['/', (params) => Login],
   ['/signup', (params) => Signup],
   ['/profile', (params) => Profile],
-  ['/statistics', (params) => Stats],
+  ['/history', (params) => History],
   ['/devices', (params) => Devices],
   ['/addDevice', (params) => AddDevice],
   ['/dataEntry', (params) => DataEntry]
