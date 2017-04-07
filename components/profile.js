@@ -1,5 +1,4 @@
 import React from 'react'
-// import userDataSvc from '../services/getUserData'
 import Menu from './menu'
 
 module.exports = ({state, dispatch}) => {
