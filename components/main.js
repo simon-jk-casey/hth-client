@@ -13,7 +13,7 @@ module.exports = ({state, dispatch}) => {
     <div>
       <form>
         <input onChange={loginUsername} type='text' placeholder='Username' />
-        <input onChange={loginPassword} type='text' placeholder='Password' />
+        <input onChange={loginPassword} type='password' placeholder='Password' />
         <button className='buttons' onClick={loginButton} type='submit'>Login</button>
       </form>
       <button className='buttons' onClick={signupRoute}>Sign Up</button>
