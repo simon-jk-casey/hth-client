@@ -9,8 +9,7 @@ module.exports = (newUserData, dispatch) => {
   .end((err, res) => {
     if (res) {
       if (!err) {
-        dispatch({type: 'CLEAR_STATE', payload: 'newUser'})
-        dispatch({type: 'CHANGE_ROUTE', payload: '/'})
+        dispatch({type: 'CLEAR_STATE_CHANGE_ROUTE', payload: {category: 'newUser', route: '/'}})
       }
     } else {
       throw err

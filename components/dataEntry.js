@@ -19,7 +19,7 @@ module.exports = ({state, dispatch}) => {
       <div>
         <form id='predatorEntry'>
           <div>
-            <select defaultValue='null' onChange={captureDevice}>
+            <select id='test' defaultValue='null' onChange={captureDevice}>
               <option value='null' disabled>Select Device</option>
               {deviceListSelectOptions()}
             </select>
@@ -81,5 +81,6 @@ module.exports = ({state, dispatch}) => {
 
   function clearForm () {
     document.getElementById('predatorEntry').reset()
+    dispatch({type: 'CLEAR_STATE_CHANGE_ROUTE', payload: {category: 'newPredatorData', route: '/dataEntry'}})
   }
 }

@@ -28,7 +28,7 @@ module.exports = ({state, dispatch}) => {
           <input onChange={deviceNotes} type='text' placeholder='Notes' />
           <button className='buttons' onClick={addDevice} type='submit'>SUBMIT</button>
         </form>
-        <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/devices'})} type='submit'>CANCEL</button>
+        <button className='buttons' onClick={() => dispatch({type: 'CLEAR_STATE_CHANGE_ROUTE', payload: {category: 'newDevice', route: '/devices'}})} type='submit'>CANCEL</button>
       </div>
     </div>
   )

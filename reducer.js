@@ -1,6 +1,6 @@
 const clone = require('clone')
 
-function reducer(state, action) {
+function reducer (state, action) {
   var newState = clone(state)
   switch (action.type) {
     case 'INIT':
@@ -33,8 +33,12 @@ function reducer(state, action) {
     case 'ENTRY_HISTORY':
       newState.historyData = action.payload
       return newState
-    case 'CLEAR_STATE':
-      newState[action.payload] = {}
+    // case 'CLEAR_STATE':
+    //   newState[action.payload] = {}
+    //   return newState
+    case 'CLEAR_STATE_CHANGE_ROUTE':
+      newState[action.payload.category] = {}
+      newState.route = action.payload.route
       return newState
 
     default:
