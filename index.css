@@ -5,6 +5,10 @@
 
 /* TABLET */
 @media only screen and (min-width: 600px) {
+  html {
+    max-width: 960px;
+    margin: 0 auto;
+  }
   .col-m-1 {width: 8.33%}
   .col-m-2 {width: 16.66%}
   .col-m-3 {width: 25%}
@@ -39,9 +43,14 @@
   .col-12 {width: 100%}
 }
 
+body {
+  background-color: #F5F5F5;
+}
+
 h1, h2, h3 {
   text-align: center;
 }
+
 
 .menuBar {
   display: flex;
@@ -58,7 +67,7 @@ h1, h2, h3 {
   padding: 15px 32px;
 }
 
-.usrDiv, .passDiv {
+.usrDiv, .passDiv, .profSection {
   margin-top: 1%;
   margin-bottom: 1%;
   display: flex;
@@ -98,4 +107,12 @@ h1, h2, h3 {
 
 .signupButton {
   background-color: #f4ee42;
+}
+
+.profHeader {
+  text-align: right;
+}
+
+tr {
+  padding: 5%;
 }
