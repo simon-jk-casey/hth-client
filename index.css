@@ -65,9 +65,10 @@ h1, h2, h3 {
   background-color: #4CAF50;
   border: none;
   padding: 15px 32px;
+  width: 15%
 }
 
-.usrDiv, .passDiv, .profSection {
+.usrDiv, .passDiv {
   margin-top: 1%;
   margin-bottom: 1%;
   display: flex;
@@ -109,8 +110,30 @@ h1, h2, h3 {
   background-color: #f4ee42;
 }
 
+.profSection {
+  justify-content: center;
+}
+
 .profHeader {
   text-align: right;
+  padding-right: 10%;
+}
+
+.profData {
+
+}
+
+.editButton {
+  padding-left: 5%;
+}
+.profRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: white;
+  margin: 1% 0% 1% 0%;
 }
 
 tr {
