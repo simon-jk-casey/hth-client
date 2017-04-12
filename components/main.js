@@ -29,11 +29,11 @@ module.exports = ({state, dispatch}) => {
           </div>
         </div>
         <div className='singleButton col-12 col-m-12'>
-          <button className='buttons loginButton' onClick={loginButton} type='submit'>Login</button>
+          <button className='buttons greenButton' onClick={loginButton} type='submit'>Login</button>
         </div>
       </form>
       <div className='singleButton col-12 col-m-12'>
-        <button className='buttons signupButton' onClick={signupRoute}>Sign Up</button>
+        <button className='buttons yellowButton' onClick={signupRoute}>Sign Up</button>
       </div>
     </div>
   )

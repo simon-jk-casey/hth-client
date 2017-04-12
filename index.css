@@ -103,11 +103,11 @@ h1, h2, h3 {
   border: none;
 }
 
-.loginButton {
+.greenButton {
   background-color: #4CAF50;
 }
 
-.signupButton {
+.yellowButton {
   background-color: #f4ee42;
 }
 
@@ -161,4 +161,16 @@ h1, h2, h3 {
 
 .inlineHeading {
   display: inline;
+}
+
+.devSelect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.dNotes {
+  margin: 2% 0% 0% 18.25%;
 }
