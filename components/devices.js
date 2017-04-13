@@ -7,17 +7,34 @@ module.exports = ({state, dispatch}) => {
       <div>
         <Menu dispatch={dispatch} />
       </div>
-      <div>
-        <button className='buttons' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/addDevice'})}>Add Device</button>
+      <div className='addDevButton'>
+        <button className='singleButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/addDevice'})}>Add Device</button>
       </div>
-      {renderDeviceList()}
+      <div>
+        {renderDeviceList()}
+      </div>
     </div>
   )
 
   function renderDeviceList () {
     const { deviceList } = state
     return deviceList.map((device) =>
-      <div key={device.id}>Device Name: {device.deviceName}  Device Type: {device.deviceType} <br /> Notes: {device.notes}</div>
+      <div key={device.id} className='devices'>
+        <div className='deviceRow'>
+          <div className='col-6 col-m-6'>
+            <h4 className='inlineHeading'>Device Name: </h4>{device.deviceName}
+          </div>
+          <div className='col-6 col-m-6'>
+            <h4 className='inlineHeading'>Device Type: </h4>{device.deviceType}
+          </div>
+        </div>
+        <div className='col-12 col-m-12'>
+          <h4 className='inlineHeading'>Notes: </h4>{device.notes}
+        </div>
+      </div>
     )
+    // return deviceList.map((device) =>
+    //   <div key={device.id}>Device Name: {device.deviceName}  Device Type: {device.deviceType} <br /> Notes: {device.notes}</div>
+    // )
   }
 }

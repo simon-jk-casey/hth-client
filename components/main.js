@@ -10,13 +10,31 @@ module.exports = ({state, dispatch}) => {
     loginService(state.loginDetails, dispatch)
   }
   return (
-    <div>
+    <div className='loginContainer'>
       <form>
-        <input onChange={loginUsername} type='text' placeholder='Username' />
-        <input onChange={loginPassword} type='password' placeholder='Password' />
-        <button className='buttons' onClick={loginButton} type='submit'>Login</button>
+        <div className='usrDiv col-12 col-m-12'>
+          <div className='loginLabel col-2 col-m-2'>
+            <label htmlFor='usrField'>username:</label>
+          </div>
+          <div className='col-4 col-m-4'>
+            <input id='usrField' onChange={loginUsername} type='text' placeholder='Username' />
+          </div>
+        </div>
+        <div className='passDiv col-12 col-m-12'>
+          <div className='loginLabel col-2 col-m-2'>
+            <label htmlFor='passField'>password:</label>
+          </div>
+          <div className='col-4 col-m-4'>
+            <input id='passField' onChange={loginPassword} type='password' placeholder='Password' />
+          </div>
+        </div>
+        <div className='singleButton col-12 col-m-12'>
+          <button className='buttons greenButton' onClick={loginButton} type='submit'>Login</button>
+        </div>
       </form>
-      <button className='buttons' onClick={signupRoute}>Sign Up</button>
+      <div className='singleButton col-12 col-m-12'>
+        <button className='buttons yellowButton' onClick={signupRoute}>Sign Up</button>
+      </div>
     </div>
   )
 }
