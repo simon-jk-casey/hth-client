@@ -1,4 +1,4 @@
-// import request from 'superagent'
+import request from 'superagent'
 
 module.exports = (dispatch) => {
   const baseUrl = 'http://localhost:3000' // *dev
