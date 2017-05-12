@@ -1,11 +1,11 @@
-import request from 'superagent'
+// import request from 'superagent'
 import getDeviceListSvc from '../services/getDevices'
 import userDataSvc from '../services/getUserData'
 import getCaptureDataSvc from '../services/getCaptureData'
 
 module.exports = (loginData, dispatch) => {
-  // const baseUrl = 'http://localhost:3000' // *dev
-  const baseUrl = 'https://predata.herokuapp.com' // *deployed
+  const baseUrl = 'http://localhost:3000' // *dev
+  // const baseUrl = 'https://predata.herokuapp.com' // *deployed
   request
     .post(baseUrl + '/api/v1/login')
     .send(loginData)
