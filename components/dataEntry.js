@@ -8,6 +8,7 @@ module.exports = ({state, dispatch}) => {
   const capturedPredator = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'capturedPredator', value: e.target.value}})
   const captureNotes = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureNotes', value: e.target.value}})
   const addPredatorData = (e) => {
+    console.log(state.newPredatorData)
     e.preventDefault()
     addCaptureDataSvc(state.newPredatorData, dispatch)
     clearForm()
@@ -83,6 +84,7 @@ module.exports = ({state, dispatch}) => {
 
   function clearForm () {
     document.getElementById('predatorEntry').reset()
+    document.getElementById(state.predatorSelected).className('col-4 col-m-4 predatorCell')
     dispatch({type: 'CLEAR_STATE'})
   }
 }
