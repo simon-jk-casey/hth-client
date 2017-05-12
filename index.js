@@ -25,7 +25,9 @@ const initialState = {
   newDevice: {},
   newPredatorData: {},
   historyToggled: false,
-  historyData: {}
+  historyData: {},
+  predatorIsToggled: false,
+  predatorSelected: ''
 }
 
 const store = createStore(reducer, initialState)

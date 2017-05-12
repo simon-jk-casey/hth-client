@@ -1,6 +1,7 @@
 import React from 'react'
 import Menu from './menu'
 import addCaptureDataSvc from '../services/addCaptureData'
+import Predators from './predators'
 
 module.exports = ({state, dispatch}) => {
   const captureDevice = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureDevice', value: e.target.value}})
@@ -25,7 +26,8 @@ module.exports = ({state, dispatch}) => {
             </select>
           </div>
           <div className='predatorButtonsDiv'>
-            <div className='predatorButton'>
+            <Predators state={state} dispatch={dispatch}/>
+            {/* <div className='predatorButton'>
               <label htmlFor='shipRat'>Ship Rat</label>
               <input onChange={capturedPredator} type='radio' value='Ship Rat' id='shipRat' />
             </div>
@@ -60,7 +62,7 @@ module.exports = ({state, dispatch}) => {
             <div className='predatorButton'>
               <label htmlFor='Cat'>Cat</label>
               <input onChange={capturedPredator} type='radio' name='predatorType' value='Cat' id='Cat' />
-            </div>
+            </div> */}
           </div>
           <div>
             <input onChange={captureNotes} type='text' placeholder='Notes' />

@@ -40,7 +40,14 @@ function reducer (state, action) {
       newState[action.payload.category] = {}
       newState.route = action.payload.route
       return newState
-
+    case 'TOGGLE_SELECTED':
+      if (!newState.predatorIsToggled) {
+        newState.predatorIsToggled = true
+      } else {
+        newState.predatorIsToggled = false
+      }
+      newState.predatorSelected = action.payload
+      return newState
     default:
       return newState
   }

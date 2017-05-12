@@ -174,3 +174,35 @@ h1, h2, h3 {
 .dNotes {
   margin: 2% 0% 0% 18.25%;
 }
+
+.predatorComponent {
+  margin-top: 3%;
+}
+
+.predatorSelectorRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.predatorCell {
+  background-color: black;
+  margin: 0.2%;
+  padding: 0.2%;
+}
+.predatorHeading {
+  margin: 2% 0 2% 0;
+  text-align: center;
+  color: white;
+}
+
+.predImg {
+  width: 100%;
+  margin: 0;
+}
+
+.predatorSelected {
+  background-color: red;
+  margin: 0.2%;
+  padding: 0.2%;
+}
