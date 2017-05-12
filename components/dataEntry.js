@@ -5,7 +5,6 @@ import Predators from './predators'
 
 module.exports = ({state, dispatch}) => {
   const captureDevice = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureDevice', value: e.target.value}})
-  const capturedPredator = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'capturedPredator', value: e.target.value}})
   const captureNotes = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureNotes', value: e.target.value}})
   const addPredatorData = (e) => {
     console.log(state.newPredatorData)
@@ -27,43 +26,7 @@ module.exports = ({state, dispatch}) => {
             </select>
           </div>
           <div className='predatorButtonsDiv'>
-            <Predators state={state} dispatch={dispatch}/>
-            {/* <div className='predatorButton'>
-              <label htmlFor='shipRat'>Ship Rat</label>
-              <input onChange={capturedPredator} type='radio' value='Ship Rat' id='shipRat' />
-            </div>
-            <div className='predatorButton'>
-              <label htmlFor='norwayRat'>Norway Rat</label>
-              <input onChange={capturedPredator} type='radio' name='predatorType' value='Norway Rat' id='norwayRat' />
-            </div>
-            <div className='predatorButton'>
-              <label htmlFor='Possum'>Possum</label>
-              <input onChange={capturedPredator} type='radio' name='predatorType' value='Possum' id='Possum' />
-            </div>
-            <div className='predatorButton'>
-              <label htmlFor='Ferret'>Ferret</label>
-              <input onChange={capturedPredator} type='radio' name='predatorType' value='Ferret' id='Ferret' />
-            </div>
-            <div className='predatorButton'>
-              <label htmlFor='Stoat'>Stoat</label>
-              <input onChange={capturedPredator} type='radio' name='predatorType' value='Stoat' id='Stoat' />
-            </div>
-            <div className='predatorButton'>
-              <label htmlFor='Hedgehog'>Hedgehog</label>
-              <input onChange={capturedPredator} type='radio' name='predatorType' value='Hedgehog' id='Hedgehog' />
-            </div>
-            <div className='predatorButton'>
-              <label htmlFor='Mouse'>Mouse</label>
-              <input onChange={capturedPredator} type='radio' name='predatorType' value='Mouse' id='Mouse' />
-            </div>
-            <div className='predatorButton'>
-              <label htmlFor='Weasel'>Weasel</label>
-              <input onChange={capturedPredator} type='radio' name='predatorType' value='Weasel' id='Weasel' />
-            </div>
-            <div className='predatorButton'>
-              <label htmlFor='Cat'>Cat</label>
-              <input onChange={capturedPredator} type='radio' name='predatorType' value='Cat' id='Cat' />
-            </div> */}
+            <Predators state={state} dispatch={dispatch} />
           </div>
           <div>
             <input onChange={captureNotes} type='text' placeholder='Notes' />
@@ -84,7 +47,10 @@ module.exports = ({state, dispatch}) => {
 
   function clearForm () {
     document.getElementById('predatorEntry').reset()
-    document.getElementById(state.predatorSelected).className('col-4 col-m-4 predatorCell')
-    dispatch({type: 'CLEAR_STATE'})
+    document.getElementById(state.predatorSelected).className = 'col-4 col-m-4 predatorCell'
+    dispatch({type: 'CLEAR_STATE', payload: 'newPredatorData'})
+    dispatch({type: 'CLEAR_STATE', payload: 'predatorSelected'})
+    dispatch({type: 'TOGGLE_SELECTED'})
+    console.log(state.predatorIsToggled)
   }
 }

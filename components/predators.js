@@ -1,10 +1,6 @@
 import React from 'react'
 
 module.exports = ({state, dispatch}) => {
-  // function toggleSelected (id) {
-  //   document.getElementById(id).className = 'predatorSelected'
-  // }
-  //
   const toggleSelected = (e) => {
     dispatch({type: 'TOGGLE_SELECTED', payload: e.target.parentElement.id})
     dispatch({type: 'ADD_PREDATOR', payload: {field: 'capturedPredator', value: e.target.parentElement.id}})
