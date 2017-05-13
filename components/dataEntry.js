@@ -7,10 +7,13 @@ module.exports = ({state, dispatch}) => {
   const captureDevice = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureDevice', value: e.target.value}})
   const captureNotes = (e) => dispatch({type: 'ADD_PREDATOR', payload: {field: 'captureNotes', value: e.target.value}})
   const addPredatorData = (e) => {
-    console.log(state.newPredatorData)
     e.preventDefault()
-    addCaptureDataSvc(state.newPredatorData, dispatch)
-    clearForm()
+    if (state.newPredatorData.captureDevice === 'null' || state.newPredatorData.captureDevice === undefined) {
+      document.getElementById('errorField').innerHTML = 'Please Select Device'
+    } else {
+      addCaptureDataSvc(state.newPredatorData, dispatch)
+      clearForm()
+    }
   }
   return (
     <div>
@@ -19,21 +22,24 @@ module.exports = ({state, dispatch}) => {
       </div>
       <div>
         <form id='predatorEntry'>
-          <div>
-            <select id='test' defaultValue='null' onChange={captureDevice}>
-              <option value='null' disabled>Select Device</option>
+          <div className='deviceSelector col-12 col-m-12'>
+            <select id='deviceSelect' defaultValue='null' onChange={captureDevice}>
+              <option value='null'>Select Device</option>
               {deviceListSelectOptions()}
             </select>
           </div>
+          <div className='errorDiv col-12 col-m-12'><p id='errorField'></p></div>
           <div className='predatorButtonsDiv'>
             <Predators state={state} dispatch={dispatch} />
           </div>
-          <div>
-            <input onChange={captureNotes} type='text' placeholder='Notes' />
+          <div className='notesDiv'>
+            <textarea className='predNotes' onChange={captureNotes} name='Notes' rows='6' cols='60' wrap='soft' maxLength='240' />
           </div>
-          <button className='buttons' onClick={addPredatorData} type='submit'>SUBMIT</button>
         </form>
-        <button className='buttons' onClick={clearForm}>CANCEL</button>
+        <div className="buttonDiv">
+          <button className='buttons greenButton' form='predatorEntry' onClick={addPredatorData} type='submit'>SUBMIT</button>
+          <button className='buttons yellowButton' onClick={clearForm}>CANCEL</button>
+        </div>
       </div>
     </div>
   )
@@ -48,7 +54,7 @@ module.exports = ({state, dispatch}) => {
   function clearForm () {
     document.getElementById('predatorEntry').reset()
     document.getElementById(state.predatorSelected).className = 'col-4 col-m-4 predatorCell'
-    dispatch({type: 'CLEAR_STATE', payload: 'newPredatorData'})
+    dispatch({type: 'CLEAR_STATE_CHANGE_ROUTE', payload: {category: 'newPredatorData', route: '/dataEntry'}})
     dispatch({type: 'CLEAR_STATE', payload: 'predatorSelected'})
     dispatch({type: 'TOGGLE_SELECTED'})
     console.log(state.predatorIsToggled)

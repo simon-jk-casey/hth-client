@@ -23,7 +23,9 @@ const initialState = {
   userDetails: {},
   deviceList: [],
   newDevice: {},
-  newPredatorData: {},
+  newPredatorData: {
+    captureNotes: ''
+  },
   historyToggled: false,
   historyData: {},
   predatorIsToggled: false,
