@@ -23,9 +23,9 @@ module.exports = ({state, dispatch}) => {
           <img className='predImg' src='../images/pests/shipRat.jpg' />
             <h4 className='predatorHeading'>Ship Rat</h4>
         </div>
-        <div id='Kiore (Pacific) Rat' className='predatorCell col-4' onClick={toggleSelected}>
-          <img className='predImg' src='../images/pests/kiorePacificRat.jpg' />
-            <h4 className='predatorHeading'>Kiore (Pacific) Rat</h4>
+        <div id='Mouse' className='predatorCell col-4' onClick={toggleSelected}>
+          <img className='predImg' src='../images/pests/mouse.jpg' />
+            <h4 className='predatorHeading'>Mouse</h4>
         </div>
       </div>
       <div className='predatorSelectorRow col-12'>
