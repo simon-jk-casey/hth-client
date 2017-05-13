@@ -1,4 +1,4 @@
-import request from 'superagent'
+// import request from 'superagent'
 import getDeviceListSvc from '../services/getDevices'
 
 module.exports = (newDevice, dispatch) => {

@@ -101,6 +101,7 @@ h1, h2, h3 {
   width: 6.5em;
   padding: 1em;
   border: none;
+  margin: 0 1% 0 1%;
 }
 
 .greenButton {
@@ -173,4 +174,61 @@ h1, h2, h3 {
 
 .dNotes {
   margin: 2% 0% 0% 18.25%;
+}
+
+.predatorComponent {
+  margin: 2% 0 2% 0;
+}
+
+.predatorSelectorRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.predatorCell {
+  background-color: black;
+  margin: 0.2%;
+  padding: 0.2%;
+}
+.predatorHeading {
+  margin: 2% 0 2% 0;
+  text-align: center;
+  color: white;
+}
+
+.predImg {
+  width: 100%;
+  margin: 0;
+}
+
+.predatorSelected {
+  background-color: red;
+  margin: 0.2%;
+  padding: 0.2%;
+}
+
+.deviceSelector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+  margin-top: 4%;
+}
+
+.errorDiv {
+  text-align: center;
+  font-size: 1em;
+  height: 1.25em;
+}
+
+.notesDiv {
+  display: flex;
+  justify-content: center;
+  margin: 3% 0 3% 0;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  margin: 1% 0 3% 0;
 }

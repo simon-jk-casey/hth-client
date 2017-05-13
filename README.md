@@ -1,6 +1,11 @@
 CURRENT WORKING:
 change localhost routes to deployed routes
 
+PREDATOR COMPONENT:
+component renders ok - sends data to DB ok
+drop down on data entry does not reset/send data on subs. entries
+
+
 TO DO:
 
 DATAENTRY:
