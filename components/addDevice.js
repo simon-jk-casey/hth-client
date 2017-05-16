@@ -17,14 +17,14 @@ module.exports = ({state, dispatch}) => {
       </div>
       <div className='devEntryForm'>
         <form id='deviceEntry'>
-          <div className='devSelect col-12 col-m-12'>
-            <div className='col-5 col-m-5'>
+          <div className='devSelect col-6 col-m-6'>
+            <div className='col-6 col-m-6'>
               <label htmlFor='devName'>
                 <h4 className='inlineHeading'>Device Name: </h4>
               </label>
               <input id='devName' onChange={deviceName} type='text' placeholder='Device Name' />
             </div>
-            <div className='col-5 col-m-5'>
+            <div className='col-6 col-m-6'>
               <label htmlFor='devType'>
                 <h4 className='inlineHeading'>Device Type: </h4>
               </label>
@@ -37,19 +37,17 @@ module.exports = ({state, dispatch}) => {
               </select>
             </div>
           </div>
-          <div className='dNotes col-10 col-m-10'>
+          <div className='dNotes col-6 col-m-6'>
             <label htmlFor='devNotes'>
               <h4 className='inlineHeading'>Notes: </h4>
             </label>
             <input id='devNotes' onChange={deviceNotes} type='text' placeholder='Notes' />
           </div>
-          <div className='singleButton'>
-            <button className='buttons greenButton' onClick={addDevice} type='submit'>SUBMIT</button>
-          </div>
         </form>
-        <div className='singleButton'>
-          <button className='buttons yellowButton' onClick={() => dispatch({type: 'CLEAR_STATE_CHANGE_ROUTE', payload: {category: 'newDevice', route: '/devices'}})} type='submit'>CANCEL</button>
-        </div>
+      </div>
+      <div className='buttonDiv col-12 col-m-12'>
+        <button className='buttons greenButton' form='deviceEntry' onClick={addDevice} type='submit'>SUBMIT</button>
+        <button className='buttons yellowButton' onClick={() => dispatch({type: 'CLEAR_STATE_CHANGE_ROUTE', payload: {category: 'newDevice', route: '/devices'}})} type='submit'>CANCEL</button>
       </div>
     </div>
   )
