@@ -113,9 +113,18 @@
 }
 
 /*ADD DEVICE*/
-.devEntryForm {
+.addDevForm {
+  display:inline-block;
+}
+.deviceNameType {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+.deviceName {
+  width: 99.25%;
+}
+.deviceType {
+  width: 100%;
 }
 .devSelect {
   display: flex;
