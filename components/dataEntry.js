@@ -36,7 +36,7 @@ module.exports = ({state, dispatch}) => {
             <textarea className='predNotes' onChange={captureNotes} name='Notes' rows='6' cols='60' wrap='soft' maxLength='240' />
           </div>
         </form>
-        <div className="buttonDiv">
+        <div className="buttonDiv col-12 col-m-12">
           <button className='buttons greenButton' form='predatorEntry' onClick={addPredatorData} type='submit'>SUBMIT</button>
           <button className='buttons yellowButton' onClick={clearForm}>CANCEL</button>
         </div>

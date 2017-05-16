@@ -11,7 +11,7 @@ module.exports = ({state, dispatch}) => {
   }
   return (
     <div className='loginContainer'>
-      <form>
+      <form id='userLogin'>
         <div className='usrDiv col-12 col-m-12'>
           <div className='loginLabel col-2 col-m-2'>
             <label htmlFor='usrField'>username:</label>
@@ -28,11 +28,9 @@ module.exports = ({state, dispatch}) => {
             <input id='passField' onChange={loginPassword} type='password' placeholder='Password' />
           </div>
         </div>
-        <div className='singleButton col-12 col-m-12'>
-          <button className='buttons greenButton' onClick={loginButton} type='submit'>Login</button>
-        </div>
       </form>
-      <div className='singleButton col-12 col-m-12'>
+      <div className="buttonDiv col-12 col-m-12">
+        <button className='buttons greenButton' form='userLogin' onClick={loginButton} type='submit'>Login</button>
         <button className='buttons yellowButton' onClick={signupRoute}>Sign Up</button>
       </div>
     </div>
