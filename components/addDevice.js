@@ -15,7 +15,7 @@ module.exports = ({state, dispatch}) => {
       <div>
         <Menu dispatch={dispatch} />
       </div>
-      <div className='devEntryForm'>
+      <div className='devEntryForm col-12 col-m-12'>
         <form id='deviceEntry'>
           <div className='devSelect col-6 col-m-6'>
             <div className='col-6 col-m-6'>

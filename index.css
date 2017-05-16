@@ -113,33 +113,26 @@
 }
 
 /*ADD DEVICE*/
-.addDevForm {
-  display:inline-block;
-}
-.deviceNameType {
+.addDeviceRow {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.deviceName {
-  width: 99.25%;
-}
-.deviceType {
-  width: 100%;
-}
-.devSelect {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.dNotes {
+.typeRow {
+  margin-bottom: 1%;
 }
 #devName {
   width: 100%;
+  height: 2em;
 }
 #devType {
+  width: 101.5%;
+  height: 2.25em;
+}
+#devNotes {
   width: 100%;
 }
-
 /*DEVICES*/
 .deviceButton {
   text-align: center;
@@ -219,7 +212,7 @@ h1, h2, h3 {
 .buttonDiv {
   display: flex;
   justify-content: center;
-  margin: 1% 0 3% 0;
+  margin: 2% 0 2% 0;
 }
 .inlineHeading {
   display: inline;
@@ -235,8 +228,8 @@ h1, h2, h3 {
   margin-top: 2%;
 }
 .buttons {
-  width: 6.5em;
+  width: 10em;
   padding: 1em;
   border: none;
-  margin: 0 1% 0 1%;
+  margin: 0 2% 0 2%;
 }
