@@ -201,6 +201,20 @@
   margin: 3% 0 3% 0;
 }
 
+/*HISTORY*/
+.historyPane {
+  background-color: white;
+  margin: 1% 0 1% 0;
+}
+.historyPane, .histDateAnimal, .histDevTypeName {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.histDate, .histAnimal, .histDevType, .histDevName, .histNotes {
+  margin: 0 2% 0 2%;
+}
+
 /*UNIVERSAL*/
 body {
   background-color: #F5F5F5;
