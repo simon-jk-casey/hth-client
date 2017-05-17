@@ -33,8 +33,5 @@ module.exports = ({state, dispatch}) => {
         </div>
       </div>
     )
-    // return deviceList.map((device) =>
-    //   <div key={device.id}>Device Name: {device.deviceName}  Device Type: {device.deviceType} <br /> Notes: {device.notes}</div>
-    // )
   }
 }
