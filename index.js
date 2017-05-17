@@ -10,11 +10,10 @@ import Signup from './components/signup'
 import Login from './components/main'
 import History from './components/history'
 import Devices from './components/devices'
-import AddDevice from './components/test'
+import AddDevice from './components/addDevice'
 import DataEntry from './components/dataEntry'
 import Profile from './components/profile'
 import Views from './components/dataMapViewer'
-// SERVICES
 
 const initialState = {
   route: '/',
