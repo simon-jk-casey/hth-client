@@ -1,3 +1,7 @@
+/*~~~~~~~~~~~~~*/
+/*MEDIA QUERIES*/
+/*~~~~~~~~~~~~~*/
+
 /* MOBILE */
 [class*="col-"] {
   width: 100%
@@ -43,32 +47,11 @@
   .col-12 {width: 100%}
 }
 
-body {
-  background-color: #F5F5F5;
-}
+/*~~~~~~~~~~~~~~~~~~~~~~*/
+/* ORDERED BY COMPONENTS*/
+/*~~~~~~~~~~~~~~~~~~~~~~*/
 
-h1, h2, h3 {
-  text-align: center;
-}
-
-
-.menuBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
-  margin-bottom: 2.5%;
-}
-
-.menuButton {
-  background-color: #4CAF50;
-  border: none;
-  padding: 15px 32px;
-  width: 15%
-}
-
+/*LOGIN*/
 .usrDiv, .passDiv {
   margin-top: 1%;
   margin-bottom: 1%;
@@ -79,52 +62,43 @@ h1, h2, h3 {
   align-items: flex-start;
   align-content: flex-start;
 }
-
 .loginContainer {
   margin-top: 5%;
 }
-
 .loginLabel {
   text-align: right;
 }
-
 #usrField, #passField {
   margin-left: 3%;
 }
 
-.singleButton {
-  text-align: center;
-  margin-top: 2%;
+/*MENU*/
+.menuBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-bottom: 2.5%;
 }
-
-.buttons {
-  width: 6.5em;
-  padding: 1em;
-  border: none;
-  margin: 0 1% 0 1%;
-}
-
-.greenButton {
+.menuButton {
   background-color: #4CAF50;
+  border: none;
+  padding: 15px 32px;
+  width: 15%
 }
 
-.yellowButton {
-  background-color: #f4ee42;
-}
-
+/*PROFILE*/
 .profSection {
   justify-content: center;
 }
-
 .profHeader {
   text-align: right;
   padding-right: 10%;
 }
-
 .profData {
-
 }
-
 .editButton {
   padding-left: 5%;
 }
@@ -138,10 +112,31 @@ h1, h2, h3 {
   margin: 1% 0% 1% 0%;
 }
 
+/*ADD DEVICE*/
+.addDeviceRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.typeRow {
+  margin-bottom: 1%;
+}
+#devName {
+  width: 100%;
+  height: 2em;
+}
+#devType {
+  width: 101.5%;
+  height: 2.25em;
+}
+#devNotes {
+  width: 100%;
+}
+/*DEVICES*/
 .deviceButton {
   text-align: center;
 }
-
 .devices {
   justify-content: center;
   margin: 2% 6% 2% 6%;
@@ -154,38 +149,20 @@ h1, h2, h3 {
   justify-content: flex-start;
   align-items: center;
 }
-
 .addDevButton {
   text-align: center;
   margin-bottom: 4%;
 }
 
-.inlineHeading {
-  display: inline;
-}
-
-.devSelect {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10%;
-}
-
-.dNotes {
-  margin: 2% 0% 0% 18.25%;
-}
-
+/*PREDATORS*/
 .predatorComponent {
   margin: 2% 0 2% 0;
 }
-
 .predatorSelectorRow {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
 .predatorCell {
   background-color: black;
   margin: 0.2%;
@@ -196,39 +173,63 @@ h1, h2, h3 {
   text-align: center;
   color: white;
 }
-
 .predImg {
   width: 100%;
   margin: 0;
 }
-
 .predatorSelected {
   background-color: red;
   margin: 0.2%;
   padding: 0.2%;
 }
 
+/*DATA ENTRY*/
 .deviceSelector {
   display: flex;
   justify-content: center;
   margin-bottom: 2%;
   margin-top: 4%;
 }
-
 .errorDiv {
   text-align: center;
   font-size: 1em;
   height: 1.25em;
 }
-
 .notesDiv {
   display: flex;
   justify-content: center;
   margin: 3% 0 3% 0;
 }
 
+/*UNIVERSAL*/
+body {
+  background-color: #F5F5F5;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
 .buttonDiv {
   display: flex;
   justify-content: center;
-  margin: 1% 0 3% 0;
+  margin: 2% 0 2% 0;
+}
+.inlineHeading {
+  display: inline;
+}
+.greenButton {
+  background-color: #4CAF50;
+}
+.yellowButton {
+  background-color: #f4ee42;
+}
+.singleButton {
+  text-align: center;
+  margin-top: 2%;
+}
+.buttons {
+  width: 10em;
+  padding: 1em;
+  border: none;
+  margin: 0 2% 0 2%;
 }

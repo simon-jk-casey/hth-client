@@ -8,7 +8,7 @@ module.exports = ({state, dispatch}) => {
         <Menu dispatch={dispatch} />
       </div>
       <div className='addDevButton'>
-        <button className='singleButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/addDevice'})}>Add Device</button>
+        <button className='buttons greenButton' onClick={() => dispatch({type: 'CHANGE_ROUTE', payload: '/addDevice'})}>Add Device</button>
       </div>
       <div>
         {renderDeviceList()}
