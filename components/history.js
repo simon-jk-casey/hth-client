@@ -20,7 +20,7 @@ module.exports = ({state, dispatch}) => {
     const { historyData } = state
     return historyData.map((capture) =>
       <div key={capture.id} className='historyPane col-12 col-m-12'>
-        <div className='col-4 col-m-4'>
+        <div className='histimg col-4 col-m-4'>
           {imagePicker(capture.predCaptured)}
         </div>
         <div className='histInfo col-8 col-m-8'>
@@ -41,23 +41,23 @@ module.exports = ({state, dispatch}) => {
   function imagePicker (animal) {
     switch (animal) {
       case 'Feral Cat':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/feralCat.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/feralCat.jpg' className='histimg' />
       case 'Norway Rat':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/norwayRat.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/norwayRat.jpg' className='histimg' />
       case 'Ship Rat':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/shipRat.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/shipRat.jpg' className='histimg' />
       case 'Mouse':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/mouse.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/mouse.jpg' className='histimg' />
       case 'Ferret':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/ferret.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/ferret.jpg' className='histimg' />
       case 'Stoat':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/stoat.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/stoat.jpg' className='histimg' />
       case 'Weasel':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/weasel.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/weasel.jpg' className='histimg' />
       case 'Possum':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/possum.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/possum.jpg' className='histimg' />
       case 'Hedgehog':
-        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/hedgehog.jpg' />
+        return <img src='https://simon-jk-casey.github.io/hth-client/images/pests/hedgehog.jpg' className='histimg' />
       default:
         return
     }

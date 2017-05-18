@@ -165,8 +165,8 @@
 }
 .predatorCell {
   background-color: black;
-  margin: 0.2%;
-  padding: 0.2%;
+  margin: 0.5%;
+  padding: 0.5%;
 }
 .predatorHeading {
   margin: 2% 0 2% 0;
@@ -179,8 +179,8 @@
 }
 .predatorSelected {
   background-color: red;
-  margin: 0.2%;
-  padding: 0.2%;
+  margin: 0.5%;
+  padding: 0.5%;
 }
 
 /*DATA ENTRY*/
@@ -205,6 +205,7 @@
 .historyPane {
   background-color: white;
   margin: 1% 0 1% 0;
+  border-radius: 15px;
 }
 .historyPane, .histDateAnimal, .histDevTypeName {
   display: flex;
@@ -214,6 +215,11 @@
 .histDate, .histAnimal, .histDevType, .histDevName, .histNotes {
   margin: 0 2% 0 2%;
 }
+
+.histimg {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  }
 
 /*UNIVERSAL*/
 body {
