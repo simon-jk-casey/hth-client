@@ -5,6 +5,9 @@ function reducer (state, action) {
   switch (action.type) {
     case 'INIT':
       return newState
+    case 'CHANGE_PAGE':
+      newState.route = action.payload
+      return newState
     case 'USER_SIGNUP':
       const newUser = newState.newUser
       newUser[action.payload.field] = action.payload.value

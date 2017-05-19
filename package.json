@@ -42,5 +42,8 @@
     "superagent": "^3.5.0",
     "uglifyify": "^3.0.4",
     "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "hash-match": "^1.0.2"
   }
 }

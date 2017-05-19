@@ -2,6 +2,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { createStore } from 'redux'
 import Router from 'sheet-router'
+import history from 'sheet-router/history'
+import href from 'sheet-router/href'
 
 import reducer from './reducer'
 
@@ -45,8 +47,21 @@ const route = Router({default: '404'}, [
   ['/views', (params) => Views]
 ])
 
+
+
+history(function (href) {
+  console.log(href)
+  dispatch({type: 'CHANGE_ROUTE', payload: href.pathname})
+  console.log(getState().route)
+})
+
 subscribe(() => {
-  const Component = route(getState().route)
+  const currentPage = getState().route
+  if (window.location.href !== currentPage) {
+    window.history.pushState({}, null, currentPage)
+  }
+
+  const Component = route(currentPage)
   render(<Component state={getState()} dispatch={dispatch} />, document.querySelector('main'))
 })
 
